@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('tlo.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    color: #333;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main Section */
+.main {
+    display: flex;
+    flex: 1;
+    /* gap: 20px; */
+}
+
+/* Navigation Sidebar */
+.navigation {
+    width: 20%;
+    background-color: rgba(0, 128, 255, 0.4);
+    color: white;
+    overflow-y: auto;
+    /* border-radius: 8px; */
+    /* padding: 10px; */
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation ul li a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #446ef8;
+    /* border-radius: 4px; */
+    transition: background-color 0.3s;
+}
+
+.navigation ul li a:hover {
+    background-color: rgba(0, 0, 255, 0.6);
+}
+
+.navigation ul li ul {
+    padding-left: 20px;
+}
+
+.navigation ul li ul a {
+    background-color: #78aff7;
+}
+
+/* Right Content */
+.right {
+    flex: 1;
+    background-color: #88b8f7;
+    /* border-radius: 8px; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.group {
+    margin-bottom: 20px;
+}
+
+.group h2 {
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+.group p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Image Styling */
+.group img {
+    max-width: 100%;
+    height: auto;
+    /* border-radius: 8px; */
+    margin: 10px 0;
+}
+
+/* Form Section */
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form__column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, textarea, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* border-radius: 4px; */
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button, input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Table Section */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    /* border-radius: 8px; */
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+tr:nth-child(odd) {
+    background-color: #f0f8ff;
+}
+
+tr:nth-child(even) {
+    background-color: #e6f2ff;
+}
+
+/* Footer */
+.footer {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    /* display: flex; */
+    justify-content: space-around;
+    gap: 10px;
+    /* border-radius: 8px; */
+}
+
+.footer__element {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+}

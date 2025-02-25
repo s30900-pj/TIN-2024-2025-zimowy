@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samochody</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        var cars = [
+            { rok: 2002, przebieg: 140000, cena_wyjsciowa: 14000, cena_koncowa: 10000 },
+            { rok: 2019, przebieg: 20000, cena_wyjsciowa: 45000, cena_koncowa: 42000 },
+            { rok: 2021, przebieg: 15000, cena_wyjsciowa: 55000, cena_koncowa: 52000 }
+        ];
+
+        var table = document.createElement("table");
+
+        var thead = table.createTHead();
+        var row = thead.insertRow();
+        for (var key in cars[0]) {
+            var th = document.createElement("th");
+            th.innerHTML = key;
+            row.appendChild(th);
+        }
+
+        var tbody = table.createTBody();
+        for (var i = 0; i < cars.length; i++) {
+            var row = tbody.insertRow();
+            for (var key in cars[i]) {
+                var cell = row.insertCell();
+                cell.innerHTML = cars[i][key];
+            }
+        }
+
+        document.body.appendChild(table);
+    </script>
+
+</body>
+</html>

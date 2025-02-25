@@ -1,0 +1,51 @@
+body {
+    background-image: url('tlo.jpg');
+    padding: 30px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+#kolumny {
+    display: flex;
+    flex: 1; /* Wypełnia pozostałą przestrzeń */
+    /* min-height: 101vh; */
+}
+
+#lewaKolumna {
+    width: 20%;
+    background-color: rgba(0, 0, 255, 0.432);
+    font-size: 14px;
+    /* padding: 10px; */
+    height: 70vh;
+}
+
+#prawaKolumna {
+    width: 80%;
+    background-color: rgb(68, 68, 248);
+    /* padding: 10px; */
+    /* overflow-y: auto; */
+    overflow-y: scroll;
+    height: 70vh;
+}
+
+#stopka {
+    background-color: rgba(47, 47, 188, 0.981);
+    text-align: center;
+    padding: 10px;
+}
+ul{
+    display: block;
+    /* padding: 5px 5%; */
+    /* padding-left: 15%; */
+    padding: 0px;
+    margin: 0;
+    border-bottom: 1px solid blue;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(68, 110, 248);
+}
+

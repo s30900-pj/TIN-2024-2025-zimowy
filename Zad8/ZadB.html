@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Zdjęć</title>
+    <link rel="stylesheet" href="ZadBstyle.css">
+</head>
+<body>
+    <div id="gallery-list"></div>
+    <div id="gallery-details" style="display: none;">
+        <h2 id="gallery-title"></h2>
+        <div id="thumbnails"></div>
+    </div>
+
+    <div id="photo-form-container" style="display: none;">
+        <form id="photo-form">
+            <input type="hidden" id="selected-album-id">
+            <label for="photo-title">Tytuł:</label>
+            <input type="text" id="photo-title" required>
+            <label for="photo-url">URL zdjęcia:</label>
+            <input type="url" id="photo-url" required>
+            <button type="submit">Dodaj Zdjęcie</button>
+        </form>
+    </div>
+
+    <div id="lightbox" style="display: none;">
+        <img id="lightbox-image" alt="Lightbox Image">
+        <span id="close-lightbox">&times;</span>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.get("https://jsonplaceholder.typicode.com/albums", function (albums) {
+                displayGalleryList(albums);
+            });
+
+            $(document).on("click", ".gallery-item", function () {
+                const albumId = $(this).data("album-id");
+                $.get(`https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`, function (photos) {
+                    displayGalleryDetails(albumId, photos);
+                });
+            });
+
+            $(document).on("click", "#thumbnails img", function () {
+                const imageUrl = $(this).attr("src");
+                openLightbox(imageUrl);
+            });
+
+            $("#photo-form").submit(function (event) {
+                event.preventDefault();
+
+                const albumId = $("#selected-album-id").val();
+                const title = $("#photo-title").val();
+                const url = $("#photo-url").val();
+
+                const newPhoto = {
+                    albumId: parseInt(albumId),
+                    title: title,
+                    url: url,
+                    thumbnailUrl: url
+                };
+
+                $.ajax({
+                    type: "POST",
+                    url: "https://jsonplaceholder.typicode.com/photos",
+                    data: newPhoto,
+                });
+            });
+
+        });
+
+        function displayGalleryList(albums) {
+            const $galleryList = $("#gallery-list");
+            albums.forEach(album => {
+                const $galleryItem = $("<div>")
+                    .addClass("gallery-item")
+                    .data("album-id", album.id)
+                    .text(album.title);
+                $galleryList.append($galleryItem);
+            });
+        }
+
+        function displayGalleryDetails(albumId, photos) {
+            const $galleryDetails = $("#gallery-details");
+            const $galleryTitle = $("#gallery-title");
+            const $thumbnails = $("#thumbnails");
+            const $photoForm = $("#photo-form");
+
+            $galleryTitle.text(`Galeria ${albumId}`);
+            $thumbnails.empty();
+            $photoForm.show();
+
+            photos.forEach(photo => {
+                const $thumbnail = $("<img>")
+                    .attr("src", photo.thumbnailUrl)
+                    .attr("alt", `Photo ${photo.id}`);
+                $thumbnails.append($thumbnail);
+            });
+
+            $galleryDetails.show();
+            $thumbnails.show();
+        }
+
+        function openLightbox(imageUrl) {
+            const $lightbox = $("#lightbox");
+            const $lightboxImage = $("#lightbox-image");
+
+            $lightboxImage.attr("src", imageUrl);
+            $lightbox.show();
+
+            $("#close-lightbox").on("click", function () {
+                $lightbox.hide();
+            });
+        }
+
+    </script>
+</body>
+</html>

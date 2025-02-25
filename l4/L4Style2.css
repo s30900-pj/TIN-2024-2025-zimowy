@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    user-select: none;
+}
+
+img {
+    border-radius: 10px;
+}
+:root {
+    --navbar-height: 60px;
+    --footer-height: 70px;
+}
+
+/* base */
+body {
+    background-color: #e6e6e6;
+}
+
+/* navigation */
+.navigation {
+    height: var(--navbar-height);
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation > ul {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.navigation a {
+    padding: 5px 10px;
+}
+
+.navigation li {
+    position: relative;
+}
+
+.navigation li:hover ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 120%;
+    width: fit-content;
+    white-space: nowrap;
+    background-color: white;
+    box-shadow: 0 0 20px 3px #0000001a;
+    border-radius: 4px;
+}
+
+.navigation li ul {
+    display: none;
+    border: 1px solid black;
+}
+
+.navigation li ul a {
+    display: block;
+    border-bottom: 1px solid black;
+}
+
+/* main content */
+.right {
+    display: flex;
+    gap: 30px;
+    padding: 15px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .right {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .right {
+        height: calc(100vh - var(--navbar-height) - var(--footer-height));
+    }
+}
+
+.group {
+    overflow-y: auto;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 0 20px 3px #0000001a;
+    padding: 20px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .group {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .group {
+        width: 50%;
+    }
+}
+
+img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr {
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+}
+
+form {
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+form input[type="text"], form textarea, form select {
+    width: 100%;
+}
+
+/* footer */
+.footer {
+    height: var(--footer-height);
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.footer__element {
+    display: flex;
+    align-items: center;
+    color: gray;
+    height: 100%;
+    flex-grow: 1;
+    border-left: 1px solid gray;
+    padding-left: 20px;
+}
+
+.footer__element:first-child {
+    border: none;
+}

@@ -1,0 +1,114 @@
+/* base */
+body {
+    height: 100vh;
+    background-image: url('tlo.jpg');
+    background-size: cover;
+}
+
+h1, h2, h3, h4 {
+    color: #003852;
+}
+
+h1, h2 {
+    font-size: 50px;
+}
+
+/* containers */
+.container {
+    margin: 0 auto;
+    width: 90vw;
+    height: 80vh;
+}
+
+.main {
+    display: flex;
+    height: 100%;
+}
+
+/* navigation */
+.navigation {
+    width: 200px;
+    flex-shrink: 0;
+    background-color: #00aeff70;
+    backdrop-filter: blur(4px);
+}
+
+.navigation ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #00aeff;
+}
+
+.navigation li > ul a {
+    padding-left: 40px;
+    background-color: #0096db;
+}
+
+.navigation a:hover {
+    background-color: #006696;
+}
+
+.navigation li a {
+    padding: 5px 0;
+    display: block;
+    color: white;
+    padding-left: 20px;
+}
+
+/* right */
+.right {
+    padding: 0 20px;
+    background-color: #c7edff;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #00aeff;
+    color: white;
+}
+
+td { 
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color:#94ddff;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    gap: 60px;
+}
+
+img {
+    width: 500px;
+}
+
+/* footer */
+.footer {
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #003852;
+}
+
+.footer__element {
+    padding: 10px 0;
+    color: white;
+}
+
+.footer__element:hover {
+    background-color: #002c41;
+}

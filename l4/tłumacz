@@ -1,0 +1,183 @@
+/* Podstawowe ustawienia dla całego dokumentu */
+body {
+    margin: 0; /* Usuwa domyślne marginesy */
+    font-family: Arial, Helvetica, sans-serif; /* Ustawia czytelną czcionkę */
+    background-color: #e6e6e6; /* Kolor tła strony */
+}
+
+/* Uniwersalny styl dla wszystkich elementów */
+* {
+    box-sizing: border-box; /* Ułatwia zarządzanie wymiarami elementów */
+}
+
+/* Linki */
+a {
+    color: inherit; /* Przejmuje kolor z nadrzędnego elementu */
+    text-decoration: none; /* Usuwa podkreślenie */
+    user-select: none; /* Zapobiega zaznaczaniu tekstu w linkach */
+}
+
+/* Obrazy */
+img {
+    border-radius: 10px; /* Zaokrąglenie rogów obrazów */
+    width: 100%; /* Obrazy zajmują całą szerokość rodzica */
+    height: 300px; /* Stała wysokość obrazów */
+    object-fit: cover; /* Obrazy są przycinane, aby wypełniały obszar */
+    object-position: center; /* Obraz centrowany w obszarze */
+}
+
+/* Zmienne CSS */
+:root {
+    --navbar-height: 60px; /* Wysokość nawigacji */
+    --footer-height: 70px; /* Wysokość stopki */
+}
+
+/* Nawigacja */
+.navigation {
+    height: var(--navbar-height); /* Wysokość paska nawigacji */
+    width: 100%; /* Rozciąga się na całą szerokość */
+    background-color: white; /* Białe tło */
+    display: flex; /* Elementy ułożone w jednej linii */
+    align-items: center; /* Wyrównanie do środka pionowo */
+    padding: 0 30px; /* Odstępy po bokach */
+}
+
+/* Lista w nawigacji */
+.navigation ul {
+    list-style-type: none; /* Usuwa kropki z listy */
+    padding: 0; /* Usuwa wewnętrzne odstępy */
+}
+
+/* Główna lista */
+.navigation > ul {
+    display: inline-flex; /* Elementy ułożone w linii */
+    gap: 10px; /* Odstęp między elementami */
+}
+
+/* Linki w nawigacji */
+.navigation a {
+    padding: 5px 10px; /* Wewnętrzne odstępy linków */
+}
+
+/* Elementy listy nawigacji */
+.navigation li {
+    position: relative; /* Potrzebne do obsługi rozwijanych list */
+}
+
+/* Styl rozwijanej listy */
+.navigation li ul {
+    display: none; /* Ukrywa podmenu */
+    position: absolute; /* Pozycjonowanie względem rodzica */
+    left: 0; /* Lewa krawędź równa rodzicowi */
+    top: 120%; /* Ustawienie poniżej głównego elementu */
+    flex-direction: column; /* Ułożenie w kolumnie */
+    width: fit-content; /* Dopasowanie szerokości do zawartości */
+    white-space: nowrap; /* Tekst w jednej linii */
+    background-color: white; /* Białe tło */
+    box-shadow: 0 0 20px 3px #0000001a; /* Cień */
+    border-radius: 4px; /* Zaokrąglone rogi */
+    border: 1px solid black; /* Ramka */
+}
+
+/* Styl linków w rozwijanej liście */
+.navigation li ul a {
+    display: block; /* Linki jako bloki */
+    border-bottom: 1px solid black; /* Linie oddzielające linki */
+}
+
+/* Pokaż podmenu po najechaniu */
+.navigation li:hover ul {
+    display: flex; /* Pokazuje ukrytą listę */
+}
+
+/* Główna zawartość */
+.right {
+    display: flex; /* Elementy w jednej linii */
+    gap: 30px; /* Odstęp między sekcjami */
+    padding: 15px; /* Wewnętrzne odstępy */
+}
+
+/* RWD: Układ pionowy dla małych ekranów */
+@media only screen and (max-width: 1000px) {
+    .right {
+        flex-direction: column; /* Zmiana układu na pionowy */
+    }
+}
+
+/* RWD: Wysokość sekcji na dużych ekranach */
+@media only screen and (min-width: 1000px) {
+    .right {
+        height: calc(100vh - var(--navbar-height) - var(--footer-height)); /* Pełna wysokość */
+    }
+}
+
+/* Grupa sekcji */
+.group {
+    overflow-y: auto; /* Przewijanie w pionie */
+    border-radius: 4px; /* Zaokrąglone rogi */
+    background-color: white; /* Białe tło */
+    box-shadow: 0 0 20px 3px #0000001a; /* Cień */
+    padding: 20px; /* Wewnętrzne odstępy */
+}
+
+/* RWD: Szerokość grupy na małych ekranach */
+@media only screen and (max-width: 1000px) {
+    .group {
+        width: 100%; /* Cała szerokość */
+    }
+}
+
+/* RWD: Szerokość grupy na dużych ekranach */
+@media only screen and (min-width: 1000px) {
+    .group {
+        width: 50%; /* Połowa szerokości */
+    }
+}
+
+/* Tabela */
+table {
+    width: 100%; /* Tabela na całą szerokość */
+    border-collapse: collapse; /* Złączenie linii komórek */
+}
+
+table tr {
+    text-align: center; /* Wyrównanie tekstu w środku */
+    border-bottom: 1px solid lightgray; /* Linie oddzielające wiersze */
+}
+
+/* Formularz */
+form {
+    background-color: lightgray; /* Szare tło */
+    padding: 10px; /* Wewnętrzne odstępy */
+    border-radius: 10px; /* Zaokrąglone rogi */
+}
+
+/* Pola formularza */
+form input[type="text"],
+form textarea,
+form select {
+    width: 100%; /* Pola na całą szerokość */
+}
+
+/* Stopka */
+.footer {
+    height: var(--footer-height); /* Wysokość stopki */
+    display: flex; /* Elementy w linii */
+    background-color: white; /* Białe tło */
+    justify-content: space-between; /* Elementy rozmieszczone */
+}
+
+.footer__element {
+    display: flex; /* Elementy w linii */
+    align-items: center; /* Wyrównanie pionowe */
+    color: gray; /* Szary tekst */
+    height: 100%; /* Pełna wysokość stopki */
+    flex-grow: 1; /* Równy podział przestrzeni */
+    border-left: 1px solid gray; /* Linie między elementami */
+    padding-left: 20px; /* Wewnętrzny odstęp */
+}
+
+/* Usunięcie linii dla pierwszego elementu */
+.footer__element:first-child {
+    border: none;
+}

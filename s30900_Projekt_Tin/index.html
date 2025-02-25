@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="logo" href="assets/img/logo.png">
+  <title>Tanie Gdańskie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nawigacja kontener">
+      <a href="#" class="nawigacja_logo">
+        <img src="assets/img/logo.png" alt="Obraz logo">
+      </a>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nawigacja_menu"  id="nawigacja_menu">
+        <ul class="nawigacja_lista">
+          <li class="nawigacja_element">
+            <a href="#strona-domowa" class="nawigacja__link aktywny-link">
+              <span>Strona główna</span>
+            </a>
+          </li>
+          <li class="nawigacja_element">
+            <a href="#okazje" class="nawigacja__link">
+              <span>Okazje</span>
+            </a>
+          </li>
+          <li class="nawigacja_element">
+            <a href="#ogloszenia" class="nawigacja__link">
+              <span>Ogłoszenia</span>
+            </a>
+          </li>
+          <li class="nawigacja_element">
+            <a href="#kontakt" class="nawigacja__link">
+              <span>Kontakt</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="#" class="przycisk nawigacja__przycisk">
+        Dodaj ogłoszenie
+      </a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="strona-domowa sekcja" id="strona-domowa">
+      <div class="strona-domowa_kontener kontener siatka">
+        <div class="strona-domowa_dane">
+          <h1 class="strona-domowa_tytul">
+            Tutaj znajdziesz <br> idealne mieszkanie <br> dla siebie
+          </h1>
+          <p class="strona-domowa__opis">
+            Wynajmiesz oraz możesz zakupić tutaj idealne mieszkanie w dobrej cenie. Oferty odnawiają się codziennie. Łap okazje!
+          </p>
+          <form action="#" class="strona-domowa__wyszukiwanie">
+            <input 
+              type="search" 
+              placeholder="Twoja opinia jest dla nas ważna" 
+              class="strona-domowa_wyszukiwanie-wejscie"
+              required
+            >
+            <button type="submit" class="przycisk">Wyślij</button>
+          </form>
+
+          <div class="strona-domowa_wartosci">
+            <div>
+              <h1 class="strona-domowa_wartosci-liczba">
+                300 <span>+</span>
+              </h1>
+              <span class="strona-domowa_wartosci-opis">
+                Pozytywnych <br> komentarzy
+              </span>
+            </div>
+            <div>
+              <h1 class="strona-domowa_wartosci-liczba">
+                500 <span>+</span>
+              </h1>
+              <span class="strona-domowa_wartosci-opis">
+                Zadowolonych <br> mieszkańców
+              </span>
+            </div>
+            <div>
+              <h1 class="strona-domowa_wartosci-liczba">
+                600 <span>+</span>
+              </h1>
+              <span class="strona-domowa_wartosci-opis">
+                Wynajętych <br> mieszkań
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="strona-domowa_obrazki">
+          <div class="strona-domowa_kolo"></div>
+          <div class="strona-domowa_obrazek">
+            <img src="assets/img/baner.png" alt="Obraz mieszkania">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="logotypy_sekcja" id="media">
+      <div class="kontener">
+        <span class="sekcja_podtytul">Obserwuj nas!</span>
+        <h2 class="sekcja_tytul">Nasze profile<span>.</span></h2>
+
+        <div class="logotypy_kontener kontener_siatka">
+          <div class="logotypy_obrazek">
+            <a href="https://facebook.com/" target="_blank">
+              <img src="assets/img/facebook.png" alt="Facebook">
+            </a>
+          </div>
+          <div class="logotypy_obrazek">
+            <a href="https://instagram.com/" target="_blank">
+              <img src="assets/img/instagram.png" alt="Instagram">
+            </a>
+          </div>
+          <div class="logotypy_obrazek">
+            <a href="https://pinterest.com/" target="_blank">
+              <img src="assets/img/pinterest.png" alt="Pinterest">
+            </a>
+          </div>
+          <div class="logotypy_obrazek">
+            <a href="https://tiktok.com/" target="_blank">
+              <img src="assets/img/tiktok.png" alt="TikTok">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekcja_okazje" id="okazje">
+      <div class="kontener">
+        <span class="sekcja_podtytul">Proponowane</span>
+        <h2 class="sekcja_tytul">Okazje dnia<span>.</span></h2>
+
+        <div class="okazje_wrapper">
+          <div class="okazja_karta">
+            <div class="okazja_karta_img">
+              <img src="assets/img/mieszkanie1.png" alt="Mieszkanie 1">
+              <span class="okazja_tag wynajem">Na wynajem</span>
+              <div class="okazja_karta_dolny pasek">
+                <span class="adres">ul. Długa 45, Gdańsk</span>
+                <div class="ikony">
+                  <span class="ikona">
+                    <img src="assets/img/camera-icon.png" alt="Zdjęcia" style="width: 20px; height: 20px;">
+                    10
+                  </span>
+                  <span class="ikona">
+                    <img src="assets/img/eye-icon.png" alt="Wyświetlenia" style="width: 20px; height: 20px;">
+                    25
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="okazja_karta_info">
+              <p class="cena">
+                4,900 zł <small>/miesięcznie</small>
+              </p>
+              <h3 class="tytul_ogloszenia">Mieszkanie blisko centrum</h3>
+              <p class="opis_ogloszenia">
+                Świetna lokalizacja, blisko znajduje się wiele sklepów i miejsce pracy.
+              </p>
+              <div class="detale">
+                <span>3 Pokoje</span>
+                <span>2 Łazienka</span>
+                <span>350m^2</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="okazja_karta">
+            <div class="okazja_karta_img">
+              <img src="assets/img/mieszkanie2.png" alt="Mieszkanie 2">
+              <span class="okazja_tag wynajem">Na wynajem</span>
+              <div class="okazja_karta_dolny pasek">
+                <span class="adres">ul. Mariacka 15, Gdańsk</span>
+                <div class="ikony">
+                  <span class="ikona">
+                    <img src="assets/img/camera-icon.png" alt="Zdjęcia" style="width: 20px; height: 20px;">
+                    5
+                  </span>
+                  <span class="ikona">
+                    <img src="assets/img/eye-icon.png" alt="Wyświetlenia" style="width: 20px; height: 20px;">
+                    19
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="okazja_karta_info">
+              <p class="cena">
+                3,500 zł <small>/miesięcznie</small>
+              </p>
+              <h3 class="tytul_ogloszenia">Przytulna kawalerka</h3>
+              <p class="opis_ogloszenia">
+                W dobrej cenie i z dobrym wyposażeniem. Mieszkanie dostępne też na sprzedaż.
+              </p>
+              <div class="detale">
+                <span>2 Pokoje</span>
+                <span>1 Łazienka</span>
+                <span>150m^2</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="okazja_karta">
+            <div class="okazja_karta_img">
+              <img src="assets/img/mieszkanie3.png" alt="Mieszkanie 3">
+              <span class="okazja_tag sprzedaz">Do sprzedaży</span>
+              <div class="okazja_karta_dolny pasek">
+                <span class="adres">ul. Piwna 28, Gdańsk</span>
+                <div class="ikony">
+                  <span class="ikona">
+                    <img src="assets/img/camera-icon.png" alt="Zdjęcia" style="width: 20px; height: 20px;">
+                    8
+                  </span>
+                  <span class="ikona">
+                    <img src="assets/img/eye-icon.png" alt="Wyświetlenia" style="width: 20px; height: 20px;">
+                    23
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="okazja_karta_info">
+              <p class="cena">
+                3,900 zł <small>/miesięcznie</small>
+              </p>
+              <h3 class="tytul_ogloszenia">Nowoczesne mieszkanie</h3>
+              <p class="opis_ogloszenia">
+                Dostępne od zaraz. Mieszkanie na parterze z dostępem do zieleni.
+              </p>
+              <div class="detale">
+                <span>2 Pokoje</span>
+                <span>1 Łazienka</span>
+                <span>200m^2</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="okazja_karta">
+            <div class="okazja_karta_img">
+              <img src="assets/img/mieszkanie4.png" alt="Mieszkanie 4">
+              <span class="okazja_tag wynajem">Na wynajem</span>
+              <div class="okazja_karta_dolny pasek">
+                <span class="adres">ul. Ogarna 12, Gdańsk</span>
+                <div class="ikony">
+                  <span class="ikona">
+                    <img src="assets/img/camera-icon.png" alt="Zdjęcia" style="width: 20px; height: 20px;">
+                    4
+                  </span>
+                  <span class="ikona">
+                    <img src="assets/img/eye-icon.png" alt="Wyświetlenia" style="width: 20px; height: 20px;">
+                    15
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="okazja_karta_info">
+              <p class="cena">
+                2,800 zł <small>/miesięcznie</small>
+              </p>
+              <h3 class="tytul_ogloszenia">Przyjemne mieszkanie w kamienicy</h3>
+              <p class="opis_ogloszenia">
+                Bardzo klimatyczne i świetnie skomunikowane. Idealne dla par i singli.
+              </p>
+              <div class="detale">
+                <span>2 Pokoje</span>
+                <span>1 Łazienka</span>
+                <span>70m^2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekcja_ogloszenia" id="ogloszenia">
+      <div class="kontener">
+        <span class="sekcja_podtytul">Najświeższe oferty</span>
+        <h2 class="sekcja_tytul">Ogłoszenia<span>.</span></h2>
+
+        <div class="ogloszenia_wrapper kontener_siatka">
+          <div class="ogloszenie_karta">
+            <div class="ogloszenie_obrazek">
+              <img src="assets/img/dom1.png" alt="Dom">
+            </div>
+            <div class="ogloszenie_info">
+              <p class="ogloszenie_cena">4,900,000 zł</p>
+              <h3 class="ogloszenie_tytul">ul. Chmielna 47</h3>
+              <p class="ogloszenie_lokalizacja">Gdańsk</p>
+              <ul class="ogloszenie_detale">
+                <li>3 pokoje</li>
+                <li>2 łazienki</li>
+                <li>1 garaż</li>
+              </ul>
+              <a href="#" class="przycisk">Pokaż szczegóły</a>
+            </div>
+          </div>
+
+          <div class="ogloszenie_karta">
+            <div class="ogloszenie_obrazek">
+              <img src="assets/img/dom2.png" alt="Dom">
+            </div>
+            <div class="ogloszenie_info">
+              <p class="ogloszenie_cena">4,300,000 zł</p>
+              <h3 class="ogloszenie_tytul">ul. Grunwaldzka 152</h3>
+              <p class="ogloszenie_lokalizacja">Gdańsk</p>
+              <ul class="ogloszenie_detale">
+                <li>2 pokoje</li>
+                <li>2 łazienki</li>
+                <li>1 garaż</li>
+              </ul>
+              <a href="#" class="przycisk">Pokaż szczegóły</a>
+            </div>
+          </div>
+
+          <div class="ogloszenie_karta">
+            <div class="ogloszenie_obrazek">
+              <img src="assets/img/dom3.png" alt="Dom">
+            </div>
+            <div class="ogloszenie_info">
+              <p class="ogloszenie_cena">4,600,000 zł</p>
+              <h3 class="ogloszenie_tytul">ul. Szeroka 31</h3>
+              <p class="ogloszenie_lokalizacja">Gdańsk</p>
+              <ul class="ogloszenie_detale">
+                <li>3 pokoje</li>
+                <li>1 łazienka</li>
+                <li>1 garaż</li>
+              </ul>
+              <a href="#" class="przycisk">Pokaż szczegóły</a>
+            </div>
+          </div>
+
+          <div class="ogloszenie_karta">
+            <div class="ogloszenie_obrazek">
+              <img src="assets/img/dom4.png" alt="Mieszkanie">
+            </div>
+            <div class="ogloszenie_info">
+              <p class="ogloszenie_cena">5,300,000 zł</p>
+              <h3 class="ogloszenie_tytul">ul. Ogarna 15</h3>
+              <p class="ogloszenie_lokalizacja">Gdańsk</p>
+              <ul class="ogloszenie_detale">
+                <li>3 pokoje</li>
+                <li>2 łazienki</li>
+                <li>2 garaż</li>
+              </ul>
+              <a href="#" class="przycisk">Pokaż szczegóły</a>
+            </div>
+          </div>
+
+          <div class="ogloszenie_karta">
+            <div class="ogloszenie_obrazek">
+              <img src="assets/img/dom5.png" alt="Apartament">
+            </div>
+            <div class="ogloszenie_info">
+              <p class="ogloszenie_cena">9,000,000 zł</p>
+              <h3 class="ogloszenie_tytul">ul. Powstańców Warszawskich 8</h3>
+              <p class="ogloszenie_lokalizacja">Gdańsk</p>
+              <ul class="ogloszenie_detale">
+                <li>5 pokoje</li>
+                <li>3 łazienki</li>
+                <li>2 garaż</li>
+              </ul>
+              <a href="#" class="przycisk">Pokaż szczegóły</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="formularz" id="formularz">
+      <div id="modalForm" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>Dodaj nowe ogłoszenie</h2>
+          <form id="addListingForm">
+            <div class="formularz_pole">
+              <label for="imgSrc">URL obrazka</label>
+              <input type="text" id="imgSrc" name="imgSrc" placeholder="mieszkanie.png" required>
+            </div>
+            <div class="formularz_pole">
+              <label for="price">Cena</label>
+              <input type="text" id="price" name="price" placeholder="np. 5,000,000 zł" required>
+            </div>
+            <div class="formularz_pole">
+              <label for="title">Tytuł</label>
+              <input type="text" id="title" name="title" placeholder="Adres nieruchomości" required>
+            </div>
+            <div class="formularz_pole">
+              <label for="location">Lokalizacja</label>
+              <input type="text" id="location" name="location" placeholder="Miasto" required>
+            </div>
+            <div class="formularz_pole">
+              <label for="rooms">Pokoje</label>
+              <input type="number" id="rooms" name="rooms" placeholder="Liczba pokoi" required>
+            </div>
+            <div class="formularz_pole">
+              <label for="bathrooms">Łazienki</label>
+              <input type="number" id="bathrooms" name="bathrooms" placeholder="Liczba łazienek" required>
+            </div>
+            <div class="formularz_pole">
+              <label for="garage">Garaż</label>
+              <input type="number" id="garage" name="garage" placeholder="Liczba garaży" required>
+            </div>
+            <button type="submit" class="przycisk">Dodaj ogłoszenie</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <section class="kontakt" id="kontakt">
+      <div class="kontener">
+        <span class="sekcja_podtytul">Zostańmy w kontakcie</span>
+        <h2 class="sekcja_tytul">Kontakt<span>.</span></h2>
+
+        <div class="kontakt_wrapper">
+          <div class="kontakt_formularz">
+            <h3 class="kontakt_formularz_tytul">Bądźmy w kontakcie</h3>
+            <form action="save_data.php" method="POST" class="formularz">
+              <div class="formularz_pole">
+                <label for="name">Imię i Nazwisko <span>*</span></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Jan Kowalski"
+                  required
+                >
+              </div>
+              <div class="formularz_pole">
+                <label for="email">Email <span>*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="jan.kowalski@example.com"
+                  required
+                >
+              </div>
+              <div class="formularz_pole">
+                <label for="phone">Phone <span>*</span></label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+48 600 700 800"
+                  required
+                >
+              </div>
+              <div class="formularz_pole">
+                <label for="message">Wiadomość</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Chciałbym uzyskać więcej informacji na temat Państwa usług."
+                ></textarea>
+              </div>
+              <div class="formularz_zgoda">
+                <input
+                  type="checkbox"
+                  id="zgoda"
+                  name="zgoda"
+                  required
+                >
+                <label for="zgoda">
+                  Wyrażam zgodę na przechowywanie mojej wiadomości przez tę stronę,
+                  aby mogła udzielić odpowiedzi na moje zapytanie. <span>*</span>
+                </label>
+              </div>
+              <button type="submit" class="przycisk">WYSLIJ</button>
+            </form>
+          </div>
+
+          <div class="kontakt_info">
+            <h3 class="kontakt_info_tytul">Napisz lub przyjedź</h3>
+            <p>
+              <strong>Email:</strong><br>
+              <a href="mailto:tanie.gdanskie@gmail.com" class="kontakt_mail">
+                tanie.gdanskie@gmail.com
+              </a>
+            </p>
+            <p>
+              <strong>Location:</strong><br>
+              Gdańsk-Śródmieście ul. Targ Drzewny 9/11 PL
+            </p>
+            <h4>Godziny otwarcia</h4>
+            <ul class="kontakt_godziny">
+              <li>Poniedziałek: 9:00 - 22:00</li>
+              <li>Wtorek: 9:00 - 22:00</li>
+              <li>Środa: 9:00 - 22:00</li>
+              <li>Czwartek: 9:00 - 22:00</li>
+              <li>Piątek: 9:00 - 22:00</li>
+              <li>Sobota: 9:00 - 18:00</li>
+              <li>Niedziela: 9:00 - 12:00</li>
+            </ul>
+            <div class="kontakt_mapa">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9322.535699049793!2d18.64840958175535!3d54.348359146102585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd7306419092a1%3A0x935b0eddb64d2f4c!2sTarg%20Drzewny%2C%2080-886%20Gda%C5%84sk!5e0!3m2!1spl!2spl!4v1693832619323!5m2!1spl!2spl"
+                width="100%"
+                height="200"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stopka" id="stopka">
+      <div class="kontener stopka_wrapper">
+        <div class="stopka_kolumna">
+          <a href="#" class="nawigacja_logo">
+            <img src="assets/img/logo.png" alt="Obraz logo">
+          </a>
+          <p class="stopka_opis">Mieszkania na nową przyszłość.</p>
+          <p class="stopka_copyright">© Tanie Gdańskie</p>
+        </div>
+
+        <div class="stopka_kolumna">
+          <h4 class="stopka_naglowek">Follow us</h4>
+          <div class="stopka_social">
+            <a href="#" target="_blank" aria-label="Facebook">
+              <img src="assets/img/facebook.png" alt="Facebook">
+            </a>
+            <a href="#" target="_blank" aria-label="Instagram">
+              <img src="assets/img/instagram.png" alt="Instagram">
+            </a>
+            <a href="#" target="_blank" aria-label="Pinterest">
+              <img src="assets/img/pinterest.png" alt="Pinterest">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </main>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        form {
+            margin: 10px 0;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Zadania JavaScript</h1>
+
+    <!-- Zadanie 1 -->
+    <section id="zad1">
+        <h2>Zadanie 1: Sprawdź, czy liczby tworzą trójkę pitagorejską</h2>
+        <form id="form-pitagorejska">
+            <input type="number" placeholder="Liczba a" id="a">
+            <input type="number" placeholder="Liczba b" id="b">
+            <input type="number" placeholder="Liczba c" id="c">
+            <button type="button" onclick="handlePitagorejska()">Sprawdź</button>
+        </form>
+        <div class="result" id="result-pitagorejska"></div>
+    </section>
+
+    <!-- Zadanie 2 -->
+    <section id="zad2">
+        <h2>Zadanie 2: Liczby z przedziału a-b podzielne przez c</h2>
+        <form id="form-podzielne">
+            <input type="number" placeholder="Początek przedziału (a)" id="range-a">
+            <input type="number" placeholder="Koniec przedziału (b)" id="range-b">
+            <input type="number" placeholder="Dzielnik (c)" id="divisor">
+            <button type="button" onclick="handlePodzielne()">Znajdź liczby</button>
+        </form>
+        <div class="result" id="result-podzielne"></div>
+    </section>
+
+    <!-- Zadanie 3 -->
+    <section id="zad3">
+        <h2>Zadanie 3: Tabliczka mnożenia</h2>
+        <form id="form-tabliczka">
+            <input type="number" placeholder="Wielkość boku" id="bok">
+            <button type="button" onclick="handleTabliczka()">Generuj</button>
+        </form>
+        <div class="result" id="result-tabliczka"></div>
+    </section>
+
+    <!-- Zadanie 4 -->
+    <section id="zad4">
+        <h2>Zadanie 4: Ciąg Fibonacciego</h2>
+        <label for="fib-n">Długość ciągu: </label>
+        <input type="number" id="fib-n" min="1" />
+        <button class="button" onclick="handleFibonacci()">Generuj Ciąg</button>
+        <p id="result-fib"></p>
+    </section>
+
+    <!-- Zadanie 5 -->
+    <section id="zad5">
+        <h2>Zadanie 5: Choinka</h2>
+        <label for="choinka-h">Wysokość choinki: </label>
+        <input type="number" id="choinka-h" min="1" />
+        <button class="button" onclick="handleChoinka()">Rysuj Choinkę</button>
+        <p id="result-choinka"></p>
+    </section>
+
+    <!-- Zadanie 6 -->
+    <section id="zad6">
+        <h2>Zadanie 6: Choinka Nocą</h2>
+        <label for="choinka-noca-h">Wysokość choinki: </label>
+        <input type="number" id="choinka-noca-h" min="1" />
+        <button class="button" onclick="handleChoinkaNoca()">Rysuj Choinkę Nocą</button>
+        <p id="result-choinka-noca"></p>
+    </section>
+
+    <!-- Zadanie 7 -->
+    <section id="zad7">
+        <h2>Zadanie 7: Pole Figury (switch)</h2>
+        <label for="figura-rodzaj">Rodzaj figury: </label>
+        <select id="figura-rodzaj">
+            <option value="prostokat">Prostokąt</option>
+            <option value="trapez">Trapez</option>
+            <option value="rownoleglobok">Równoległobok</option>
+            <option value="trojkat">Trójkąt</option>
+        </select><br>
+        <label for="figura-a">Podstawa (a): </label>
+        <input type="number" id="figura-a" />
+        <label for="figura-b">Górna podstawa (b): </label>
+        <input type="number" id="figura-b" />
+        <label for="figura-h">Wysokość (h): </label>
+        <input type="number" id="figura-h" />
+        <button class="button" onclick="handlePoleFigury()">Oblicz Pole</button>
+        <p id="result-pole-figury"></p>
+    </section>
+
+    <!-- Zadanie 8 -->
+    <section id="zad8"">
+        <h2>Zadanie 8: Pole Figury (callback)</h2>
+        <label for="figura-rodzaj">Rodzaj figury: </label>
+        <select id="figura-rodzaj">
+            <option value="prostokat">Prostokąt</option>
+            <option value="trapez">Trapez</option>
+            <option value="rownoleglobok">Równoległobok</option>
+            <option value="trojkat">Trójkąt</option>
+        </select><br>
+        <label for="figura-a">Podstawa (a): </label>
+        <input type="number" id="figura-a" />
+        <label for="figura-b">Górna podstawa (b): </label>
+        <input type="number" id="figura-b" />
+        <label for="figura-h">Wysokość (h): </label>
+        <input type="number" id="figura-h" />
+        <button class="button" onclick="handlePoleFiguryCallback()">Oblicz Pole</button>
+        <p id="result-pole-figury-callback"></p>
+    </section>
+
+    <!-- Zadanie 9 -->
+    <section id="zad9">
+        <h2>Zadanie 9: Trójkąt Pascala</h2>
+        <label for="pascal-h">Wysokość trójkąta: </label>
+        <input type="number" id="pascal-h" min="1" />
+        <button class="button" onclick="handleTrojkatPascala()">Rysuj Trójkąt Pascala</button>
+        <p id="result-pascal"></p>
+    </section>
+
+    <!-- Zadanie 10 -->
+    <section id="zad10">
+        <h2>Zadanie 10: Cenzura</h2>
+        <label for="cenzura-slowa">Niedozwolone słowa (oddzielone przecinkiem): </label>
+        <input type="text" id="cenzura-slowa" />
+        <br>
+        <label for="cenzura-zdanie">Zdanie do ocenzurowania: </label>
+        <input type="text" id="cenzura-zdanie" />
+        <button class="button" onclick="handleCenzura()">Ocenzuruj</button>
+        <p id="result-cenzura"></p>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

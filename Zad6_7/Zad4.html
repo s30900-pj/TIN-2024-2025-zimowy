@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Strona</title>
+    <link rel="stylesheet" href="Zad4_style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <div class="menu-icon">&#9776;</div>
+            <ul class="navbar-data">
+                <li><a href="#">Główna</a></li>
+                <li class="navbar1"><a href="#">Kategorie</a>
+                    <ul class="navbar2">
+                        <li><a href="#">Kategoria 1</a></li>
+                        <li><a href="#">Kategoria 2</a></li>
+                        <li><a href="#">Kategoria 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Główna2</a></li>
+                <li><a href="#">Główna3</a></li>
+            </ul>
+        </div>
+        <div class="content-container">
+            <div class="content">
+                <h1>title1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+
+                <img src="image4.png" alt="book">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, ut. Reprehenderit possimus ipsam necessitatibus non dolor tempora aspernatur voluptatum eos? Quo perspiciatis sed fugit. Sunt blanditiis exercitationem nostrum eius laudantium.</p>
+
+                <h1>title2</h1>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cupiditate quae repudiandae veniam praesentium, id, dolores possimus explicabo non aliquam, illo itaque facilis aliquid enim commodi harum eius at soluta?
+                <h1>title3</h1>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cupiditate quae repudiandae veniam praesentium, id, dolores possimus explicabo non aliquam, illo itaque facilis aliquid enim commodi harum eius at soluta?
+                
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit placeat explicabo, excepturi recusandae consequuntur consectetur minus, eveniet ratione labore aut laudantium sequi ullam quibusdam? Quibusdam numquam officia animi vitae asperiores?
+            </div>
+            <div class="content">
+                <h1>title4</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+
+                <div class="form-container">
+                    <form action="#" method="post">
+                        <div class="left-from">
+                        <label for="name">Imię i Nazwisko:</label><br>
+                        <input type="text" id="name" name="name" required><br><br>
+                        
+                        <label for="long-text">Dłuższy tekst:</label><br>
+                        <textarea id="long-text" name="long-text" rows="4">
+                            Tutaj wpisz dłuższy tekst...
+                        </textarea><br><br>
+        
+                        <label for="options">Wybierz opcję A, B lub C:</label>
+                        <select id="options" name="options">
+                            <option value="a">Opcja A</option>
+                            <option value="b">Opcja B</option>
+                            <option value="c">Opcja C</option>
+                        </select>
+                        </div>
+                        <div class="right-form">
+                        <label for="radio">Wybierz opcję A, B lub C:</label><br>
+                        <input type="radio" id="option1" name="options" value="option1">
+                        <label for="option1">A</label><br>
+        
+                        <input type="radio" id="option2" name="options" value="option2">
+                        <label for="option2">B</label><br>
+        
+                        <input type="radio" id="option3" name="options" value="option3">
+                        <label for="option3">C</label><br>
+                        <input type="submit" value="Wyślij">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="table-container">
+                    <div class="table-container">
+                        <h1>Tabela 1</h1>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nagłówek 1</th>
+                                    <th>Nagłówek 2</th>
+                                    <th>Nagłówek 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Dane 1,1</td>
+                                    <td>Dane 1,2</td>
+                                    <td>Dane 1,3</td>
+                                </tr>
+                                <tr>
+                                    <td>Dane 2,1</td>
+                                    <td>Dane 2,2</td>
+                                    <td>Dane 2,3</td>
+                                </tr>
+                                <tr>
+                                    <td>Dane 3,1</td>
+                                    <td>Dane 3,2</td>
+                                    <td>Dane 3,3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <samp class="footer-size">&copy;sample text1</samp>
+        </div>
+        <div class="footer-container">
+            <samp class="footer-size">&copy;sample text2</samp>
+        </div>
+        <div class="footer-container">
+            <samp class="footer-size">&copy;sample text3</samp>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            var menuItems = document.querySelector('.navbar-data');
+            menuItems.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

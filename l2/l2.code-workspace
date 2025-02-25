@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../test chat"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "l2"
+	}
+}
